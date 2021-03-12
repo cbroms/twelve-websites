@@ -1,0 +1,56 @@
+body {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(235, 235, 235);
+  color: rgb(22, 22, 22);
+}
+
+img.full {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid rgb(22, 22, 22);
+}
+
+.website {
+  border-top: 6px double rgb(22, 22, 22);
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+a {
+  color: rgb(22, 22, 22);
+}
+
+sup {
+  font-size: 1.1rem;
+}
+
+.header {
+  font-size: 6rem;
+}
+
+.padded {
+  padding-bottom: 40px;
+}
+
+#birb {
+  position: absolute;
+  top: 0;
+}
+
+summary {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  border-top: 2px dashed rgb(22, 22, 22);
+  padding: 20px 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-item {
+  padding-right: 30px;
+}
