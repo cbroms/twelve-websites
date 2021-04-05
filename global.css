@@ -45,8 +45,14 @@ sup {
 }
 
 summary {
-  text-decoration: underline;
   cursor: pointer;
+}
+
+summary::after {
+  content: "[ more ]";
+  text-decoration: underline;
+  padding-left: 20px;
+  font-size: 1rem;
 }
 
 footer {
@@ -64,4 +70,8 @@ footer {
 
 #footer-image {
   height: 20px;
+}
+
+h3 {
+  font-size: 2rem;
 }
