@@ -18,9 +18,20 @@ img.full {
 }
 
 .website {
-  border-top: 6px double rgb(22, 22, 22);
-  padding-top: 20px;
-  padding-bottom: 60px;
+    padding:  40px;
+    border-top: 2px dashed rgb(22, 22, 22);
+ 
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.website > a {
+    text-decoration: none;
+}
+
+.website:hover {
+    padding: 40px 20px;
+    background-color: white;
 }
 
 a {
@@ -73,5 +84,7 @@ footer {
 }
 
 h3 {
+    margin: 0;
+    margin-bottom: 20px;
   font-size: 2rem;
 }
