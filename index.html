@@ -5,9 +5,9 @@
     <link rel="shortcut icon" type="image/gif" href="27.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twelve Websites</title>
-    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="styles/global.css" />
     <meta
-      name="description"
+      name="og;description"
       content="I'm building one website per month for a year."
     />
     <meta name="og:type" content="website" />
@@ -18,105 +18,370 @@
       data-domain="twelvewebsites.com"
       src="https://plausible.rainflame.com/js/plausible.js"
     ></script>
+
+    <style id="popups">
+      .hyperfov-preview-element-wrapper {
+        border: none;
+        border-radius: 6px;
+        font-family: "Charter", serif;
+        background-color: var(--background-3);
+      }
+
+      .hyperfov-link-url {
+        font-family: sans-serif;
+      }
+      .hyperfov-link-title {
+        font-family: sans-serif;
+      }
+
+      .hyperfov-link-content {
+        background-color: var(--background-3);
+      }
+      .hyperfov-link-content::after {
+        display: none;
+      }
+      .hyperfov-link-image {
+        opacity: 0.8;
+        border-radius: 6px;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="padded">
-      <h1 class="header">Twelve Websites</h1>
-      <details>
-        <summary>I'm building one website per month for a year.</summary>
-        <p>I like to make websites. I've made a lot of them in the past.</p>
-        <p>
-          It takes a long time for me to make a website as a side project.
-          Depending on the reason for making it, I often spend most of that time
-          thinking, implementing something, changing my mind, and repeating the
-          process. Sometimes I start with an interface in mind, but often the
-          reason for creating the site evolves as it takes shape, so I shift
-          what the interface is and refocus. Despite how long this takes, I like
-          it because it means I get to spend a lot of time engaged in the
-          experience of making. The
-          <em>process</em> is, after all, the whole point. The end product is
-          often not that impressive or interesting.
-        </p>
-        <p>
-          I'd like to force a different way of approaching this. I want to see
-          what happens when I am bounded by a timeframe; just one month to turn
-          something that <em>could be</em> a website <em>into</em> a website. I
-          have a very constrained amount of time to dedicate to this project,
-          probably somewhere around 2-6 hours a week. That will require that
-          what I make is simple in concept, design, and implementation.
-        </p>
-        <p>
-          Of course this means what I make each month will be the product of
-          less than 25 hours worth of effort. I don't want to make a shitty
-          versions of what <em>could be</em> bigger websites, I want to make
-          websites <em>can be</em> complete in less than 25 hours worth of
-          effort. That means SIMPLE.
-        </p>
-        <p>
-          To be honest I have no idea what simple really means in this context.
-          The point of this project is to figure that out.
-          <em>What is simplicity in design, implementation, and process?</em>
-        </p>
-        <p>January 1, 2021</p>
-      </details>
-    </div>
-
-    <div class="website">
-        <a href="https://futureland.tv/christian/entry/76810" target="blank">
-        <h3>May: Simplest.page <img src="new.gif" /></h3>
-        <img class="full" src="simplest.png" />
-        <p>A website that creates small websites from emails.</p>
-        </a>
+    <div id="wrapper">
+      <div class="left">
+        <h1 id="header">Twelve Websites</h1>
       </div>
+      <div class="right">
+        <div class="intro">
+          <p>I like to make websites. I've made a lot of them in the past.</p>
 
-    <div class="website">
-        <a href="https://futureland.tv/christian/entry/68730" target="blank">
-        <h3>April: Proto-Hyperfov</h3>
-        <img class="full" src="hyperfov.png" />
-        <p>A website for browsing between websites visually.</p>
-        </a>
+          <p>
+            This year I decided to try an experiment in making a single website
+            a month. I'm curious what happens when I use a few hours of free
+            time to take an <em>idea</em> to a digital <em>thing</em>.
+          </p>
+          <p>
+            I'd like to learn what it means to make something simple. A simple
+            idea, design, and implementation. Let's see how it goes.
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/34203"
+              >January 1, 2021</a
+            >
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>Hyperfov Page Previews</h2>
+            <p>
+              September 2021 &mdash;
+              <a href="https://previews.hyperfov.com">previews.hyperfov.com</a>
+            </p>
+          </div>
+          <img class="full" src="images/previews.png" />
+          <p><em>Page previews everywhere.</em></p>
+          <p>
+            This arose as part of August’s project: Wikipedia link previews. I
+            love these things and wish they were everywhere. The problem is that
+            dynamic global link previews aren’t really possible since they
+            require making cross-origin requests from one site to another, which
+            are generally restricted. The primary goal of this project is
+            overcoming that limitation through serverless functions,
+            specifically Cloudflare Workers. I’ve wanted to try this technology
+            out for a while, and this feels like a nice and simple little
+            project to give it a shot. I’m used to writing traditional APIs and
+            deploying them myself, so writing little snippets of code that run
+            on abstracted machines feels very Twelve-websites-esqe in it’s
+            simplicity, if I can get it to work.
+          </p>
+
+          <p>
+            <a href="https://futureland.tv/christian/entry/106967"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/108799"
+              >Retrospective post</a
+            >
+            &mdash;
+            <a href="https://github.com/cbroms/hyperfov-page-previews"
+              >Source code</a
+            >
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>One Dimension</h2>
+            <p>
+              August 2021 &mdash;
+              <a href="https://onedimension.net">onedimension.net</a>
+            </p>
+          </div>
+          <img class="full" src="images/onedimension.png" />
+          <p><em>A link-based writing system.</em></p>
+          <p>
+            This one’s something I’ve wanted to build for a while;
+            <em>a truly linked writing system</em>. Meaning every piece of
+            writing has both forward and back-links. Each page is part of a
+            larger network of pages. This is not a particularly new idea, but
+            it’s something that I’ve always been curious to try designing and
+            building myself; it seems like a really elegant system. Given it’s
+            been implemented plenty of times over, I do want to change it up a
+            bit and explore a bit of new territory when it comes to how the site
+            is constructed. I’d like to make it local-first, meaning the primary
+            representation of these pages—markdown—is stored on your machine and
+            any editing happens locally, rather than online. The site itself is
+            built from these pages and served in as minimal a way as possible as
+            as a static site. So the ‘live’ version lives on your own machine,
+            and the ‘preserved’ version is the static site that lives online.
+          </p>
+
+          <p>
+            <a href="https://futureland.tv/christian/entry/97288"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/108797"
+              >Retrospective post</a
+            >
+            &mdash;
+            <a href="https://github.com/cbroms/thoughts">Source code</a>
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>Simplest.page</h2>
+            <p>
+              May 2021 &mdash;
+              <a href="https://simplest.page">simplest.page</a>
+            </p>
+          </div>
+          <img class="full" src="images/simplest.png" />
+          <p><em>A website that creates small websites from emails.</em></p>
+          <p>
+            Websites are nice, but they can get a bit stale. Stale in the sense
+            that any given web design pattern becomes set and it's difficult to
+            get past it and see new ways of accomplishing the task. Not that
+            this is always a bad thing; familiar design patterns vastly simplify
+            the amount of effort it takes to engage with new sites. But it can
+            feel stale from both the perspective of using and building websites.
+          </p>
+          <p>
+            For this reason, the bulk of this month's effort won't be building a
+            website. A website will be a final product, but the majority of what
+            I'm interested in exploring is a process:
+            <em
+              >how might we create a blog post without interacting with a
+              website at all?</em
+            >
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/69327"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/76810"
+              >Retrospective post</a
+            >
+            &mdash;
+            <a href="https://github.com/cbroms/simplest-page">Source code</a>
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>Proto-Hyperfov</h2>
+            <p>April 2021</p>
+          </div>
+          <img class="full" src="images/hyperfov.png" />
+          <p><em>A website for browsing between websites visually.</em></p>
+          <p>
+            I've been thinking about building tools for interfacing with the web
+            in new and perhaps unusual ways for quite a while. I have yet to
+            really launch into building them, so as with last month I'm using
+            Twelve Websites as an opportunity to begin that exploration.
+          </p>
+          <p>
+            The idea for this website is a system for finding new links. I'd
+            like to build new ways to explore the web, beyond just using a
+            text-based search engine. This website should serve as a search
+            engine for finding new websites, not found by searching content, but
+            by links. Drop a link into the site, and it should return ten or so
+            new directions; websites that are linked from the original or are
+            perhaps one to two steps removed.
+          </p>
+          <p>
+            The main idea I'd like to establish here is that crawling a website
+            can lead to new and unexpected links out to other websites, and that
+            collating them provides some kind of value.
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/59588"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/68730"
+              >Retrospective post</a
+            >
+            &mdash;
+            <a href="https://github.com/cbroms/link-explorer">Source code</a>
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>Maybe One Dimension</h2>
+            <p>March 2021</p>
+          </div>
+          <img class="full" src="images/maybe-onedimension.png" />
+          <p><em>A website for plain HTML + CSS conversations.</em></p>
+          <p>
+            Could the feeling of "cozy" (if at all) translate into a digital
+            system? This idea has been explored quite a bit in the past, and
+            there certainly some systems that can illicit this feeling.
+            Conversational systems, however, aren't usually considered in this
+            light. They're clear, understandable, on occasion expressive, but
+            not often cozy places to hang out.
+          </p>
+          <p>
+            How about a system where conversation can happen slowly over time,
+            building a kind of garden of thoughts and artifacts to house them.
+            The slowness of it pushes it in the direction of coziness; it has to
+            be slow and <em>crafted</em>, while also being familiar enough that
+            it sits in contrast to other more familiar methods of digital
+            communication. The blog is not a place for "my ideas, formulated as
+            posts" but rather a conversation between myself and others that
+            evolves over time through a series of pages that are unique in their
+            presentation and have a strong tie between content, structure, and
+            style.
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/50978"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/59530"
+              >Retrospective post</a
+            >
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>Classic Interfaces</h2>
+            <p>
+              February 2021 &mdash;
+              <a href="https://classicinterfaces.com">classicinterfaces.com</a>
+            </p>
+          </div>
+          <img class="full" src="images/classicinterfaces.jpg" />
+          <p>
+            <em
+              >A website for snapshots of interfaces from pre-2000's operating
+              systems.</em
+            >
+          </p>
+          <p>
+            I've
+            <a href="https://futureland.tv/christian/emulations"
+              >recently been exploring old operating systems through
+              emulators</a
+            >
+            I've found online. There's a ton of richness to them, and I have yet
+            to be able to find a way to really process them and all the effort
+            that went into how their interfaces were designed and constructed.
+            They're also a fantastic resource for interface design; there are
+            plenty of details that made certain OS iterations really stand out
+            as the canonical button, for example. There's not a very good way to
+            explore these UI elements outside of finding screenshots online, but
+            these screenshots don't show everything and aren't taken to really
+            showcase just how a button, checkbox, or scrollbar function and
+            look.
+          </p>
+          <p>
+            I'd like to build a website that addresses this gap and serves as a
+            neat place to go to find the standard input bars, tabs, windows,
+            buttons, and so on included in old operating systems.
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/42887"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/50356"
+              >Retrospective post</a
+            >
+            &mdash;
+            <a href="https://github.com/cbroms/classic-ui">Source code</a>
+          </p>
+        </div>
+
+        <div class="website">
+          <div class="website-header">
+            <h2>PhraseRanker</h2>
+            <p>
+              January 2021 &mdash;
+              <a href="https://phraseranker.com">phraseranker.com</a>
+            </p>
+          </div>
+          <img class="full" src="images/phraseranker.png" />
+          <p>
+            <em>A website for collecting phrases we're tired of hearing.</em>
+          </p>
+          <p>
+            I'm not sure how it happens, but there are certain phrases that
+            catch on in a way that feels… unnatural. It's like there are certain
+            phrases manufactured to perfectly frame a particular subject, but
+            perhaps in a way that's too perfect, too well considered. You hear
+            these phrases all the time, but when you hear someone you know say
+            them you think "that's strange, you've never used that phrase before
+            and yet I've heard it all the time." I certainly do at least. Seems
+            like
+            <a
+              href="https://www.reddit.com/r/rant/comments/jdeh0v/i_am_so_sick_of_new_normal_claps_back_5_things/"
+              >others</a
+            >
+            may have as well.
+          </p>
+          <p>
+            <a href="https://futureland.tv/christian/entry/34595"
+              >Kick-off post</a
+            >
+            &mdash;
+            <a href="https://futureland.tv/christian/entry/42726"
+              >Retrospective post</a
+            >
+            &mdash; <a href="https://github.com/cbroms/ranker">Source code</a>
+          </p>
+        </div>
+
+        <footer>
+          <div class="footer-item">
+            <a href="https://christianbroms.com"
+              >Built by Christian Broms <img id="footer-image" src="27.gif"
+            /></a>
+          </div>
+          <div class="footer-item">
+            This website's
+            <a href="https://github.com/cbroms/twelve-websites">source code</a>
+          </div>
+        </footer>
       </div>
-
-    <div class="website">
-        <a href="https://futureland.tv/christian/entry/59530" target="blank">
-            <h3>March: Maybe One Dimension</h3>
-            <img class="full" src="one-dimension.png" />
-            <p>A website for plain HTML + CSS conversations.</p>
-        </a>
     </div>
-
-    <div class="website">
-        <a href="https://futureland.tv/christian/entry/50356">
-      <h3>February: Classic Interfaces</h3>
-      <img
-        class="full"
-        src="https://classicinterfaces.com/images/paint1/large.jpg"
-      />
-      <p>
-        A website for snapshots of interfaces from pre-2000's operating systems.
-      </p>
-    </a>
-    </div>
-
-    <div class="website">
-        <a href="https://futureland.tv/christian/entry/42726">
-      <h3>January: PhraseRanker</h3>
-      <img class="full" src="https://phraseranker.com/cover.png" />
-      <p>A website for collecting phrases we're tired of hearing.</p>
-    </a>
-    </div>
+    <!-- <script defer>
+      import(
+        "https://previews.hyperfov.com/js/hyperfov-link-previews.min.js"
+      ).then(() => {
+        setPagePreviews({
+          workerUrl: "https://preview-worker.hyperfov.com",
+          styles: document.getElementById("popups").sheet,
+          //   assignPositions: () => "cursor",
+        });
+      });
+    </script> -->
   </body>
-
-  <footer>
-    <div class="footer-item">
-      <a href="https://christianbroms.com"
-        >Built by CB <img id="footer-image" src="27.gif"
-      /></a>
-    </div>
-    <div class="footer-item">
-      This website's
-      <a href="https://github.com/cbroms/twelve-websites">source code</a>
-    </div>
-  </footer>
 </html>
